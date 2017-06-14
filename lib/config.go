@@ -12,9 +12,9 @@ const (
 	// DefaultMaxStats is the default number of deltas to keep per host.
 	DefaultMaxStats = 128
 	// DefaultPingTimeout is the connection timeout.
-	DefaultPingTimeout = Duration(7000 * time.Millisecond)
+	DefaultPingTimeout = Duration(5000 * time.Millisecond)
 	//DefaultPollInterval is the default time between pings.
-	DefaultPollInterval = Duration(10000 * time.Millisecond)
+	DefaultPollInterval = Duration(5000 * time.Millisecond)
 )
 
 // NewConfigFromFlags returns a new config object by parsing flags.
