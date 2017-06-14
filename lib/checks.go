@@ -4,6 +4,7 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"fmt"
 )
 
 // CheckIntervalAction is a func(c *Checks)
@@ -96,6 +97,8 @@ func (c *Checks) Status() string {
 func doPing(h *Host) {
 	elapsed, err := h.Ping()
 	if err != nil {
+		fmt.Println("error in pingin : \n ", err)
+		// panic(err)
 		h.SetDown(time.Now())
 	} else {
 		h.SetUp()
