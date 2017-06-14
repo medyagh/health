@@ -4,7 +4,6 @@ import (
 	"strings"
 	"sync"
 	"time"
-	"fmt"
 )
 
 // CheckIntervalAction is a func(c *Checks)
